@@ -8,7 +8,8 @@ const GhibliListInfo = function(container) {
 GhibliListInfo.prototype.bindEvents = function() {
     PubSub.subscribe('Ghibli:ghibli_data_ready', (event) => {
         // this.render(event.detail);
-         console.log(this.detail)
+         console.log(event.detail)
+         this.render(event.detail)
     })
 }
 
